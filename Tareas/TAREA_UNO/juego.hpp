@@ -5,7 +5,7 @@
 
 void menu();
 void elegirOpcion();
-int dificultadFacil(int numero1);
-int dificultadDificil(int numero1);
-int generarAleatorio(int min, int max);
+int dificultadFacil(int b, int numeroA);
+int dificultadDificil(int b, int numeroA);
+int generarAleatorio(int a, int b);
 #endif
