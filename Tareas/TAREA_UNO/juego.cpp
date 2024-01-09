@@ -35,7 +35,7 @@ void elegirOpcion (){
     int numeroA = generarAleatorio(a, b);
     cout<<"Tienes " <<c<<" intentos"<<endl;
     cout<<"Es " <<numeroA<<" pero no le digas a nadie..."<<endl;
-
+   
     switch (opcion)
     {
     case 1:
