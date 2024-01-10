@@ -59,7 +59,6 @@ void elegirOpcion (){
 
 // Función que devuelve un valor aleatorio dentro del rango [min, max]
 int generarAleatorio(int a, int b) {
-    // Inicializa la semilla para rand() utilizando la hora actual
     std::srand(static_cast<unsigned int>(std::time(nullptr)));
     
     // Calcula el rango y genera un valor aleatorio dentro de ese rango
