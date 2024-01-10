@@ -6,7 +6,7 @@ all: build run
 build: $(TARGET)
 
 run: $(TARGET)
-	.\$(TARGET) 0 20
+	./$(TARGET) 0 20
 
 $(TARGET): main.exe juego.exe
 	$(CXX) $(CXXFLAGS) -o $(TARGET) main.exe juego.exe
