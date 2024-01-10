@@ -59,12 +59,9 @@ void elegirOpcion (){
 
 // Función que devuelve un valor aleatorio dentro del rango [min, max]
 int generarAleatorio(int a, int b) {
-    std::srand(static_cast<unsigned int>(std::time(nullptr)));
-    
     // Calcula el rango y genera un valor aleatorio dentro de ese rango
-    int rango = b - a + 1;
-    int valorAleatorio = std::rand() % rango + a;
-    return valorAleatorio;
+    int variable = a + rand() % (b +1 - a) ;
+    return variable;
 }
 
 int dificultadFacil(int b, int numeroA){
