@@ -59,8 +59,9 @@ void elegirOpcion (){
 
 // Función que devuelve un valor aleatorio dentro del rango [min, max]
 int generarAleatorio(int a, int b) {
+    
     // Calcula el rango y genera un valor aleatorio dentro de ese rango
-    int variable = a + rand() % (b +1 - a) ;
+    int variable = a + rand() % (b +1 - a);
     return variable;
 }
 
