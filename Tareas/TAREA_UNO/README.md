@@ -1,3 +1,10 @@
+### Instrcciones de ejecución ###
+Colocar en la terminal mingw32-make all
+Luego .\adivina.exe
+De esta forma el programa podrá ejecutarse.
+
+# Parte Teórica #
+
 ### 1. ¿Cuál es la principal diferencia entre C y C++? ###
 C es un lenguaje de propócito general, mientras que C++ está orientado a objetos. Además, los datos son más seguros en C++, porque C++ ofrece modificadores para limitar su acceso por parte del usuario. Por último, C++ tiene un manejo de excepciones bien diseñado, lo que facilita el proceso de depuración más que en C.[1]
 
