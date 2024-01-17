@@ -4,7 +4,7 @@
 
 class Podcast : public MaterialAudiovisual {
     public:
-    Podcast(string& titulo, string& grupo, string& tipoMaterial, string& autor, string& editorial, string& genero, string& estado, int hojas, float precio, 
+    Podcast(string& titulo, string& grupo, string& tipoMaterial, string& autor,  string& genero, string& estado, int hojas, float precio, 
     string& resumen, string& materialRelacionado);
     
     /*La funcion recibe el numero de hojas y devuelve si es cota, mediano o grande*/

@@ -15,10 +15,10 @@ class MaterialAudiovisual{
         string genero;        //tipo de genero
         string estado;       //¿disponible, prestado, reservado?
         int duracion;          //duracion de pelicula-podcast
-        float precioAudio;       //precio
+        float precio;       //precio
     public:
-        MaterialAudiovisual(string& t, string& g, string& Material, string& a, string& genero, string& est, 
-        int h, float p);
+        MaterialAudiovisual(string& titulo, string& grupo, string& tipoMaterial, string& autor, 
+     string& genero, string& estado, int hojas, float precio);
 };
 
 #endif

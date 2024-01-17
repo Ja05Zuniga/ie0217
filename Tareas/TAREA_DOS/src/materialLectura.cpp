@@ -1,17 +1,17 @@
 #include "materialLectura.hpp"
 
-MaterialLectura::MaterialLectura(string& t, string& g, string& Material, string& a, string& e, string& genero, 
-string& est, int h, float p)
+MaterialLectura::MaterialLectura(string& titulo, string& grupo, string& tipoMaterial, string& autor, 
+    string& editorial, string& genero, string& estado, int hojas, float precio)
 {
-    this->titulo=t;
-    this->grupo=g;
-    this->tipoMaterial=Material;
-    this->autor=a;
-    this->editorial=e;
+    this->titulo=titulo;
+    this->grupo=grupo;
+    this->tipoMaterial=tipoMaterial;
+    this->autor=autor;
+    this->editorial=editorial;
     this->genero=genero;
-    this->estado=est;
-    this->hojas=h;
-    this->precio=p;
+    this->estado=estado;
+    this->hojas=hojas;
+    this->precio=precio;
 
 }
 

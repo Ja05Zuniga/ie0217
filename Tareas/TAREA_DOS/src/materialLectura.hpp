@@ -18,7 +18,7 @@ class MaterialLectura{
         int hojas;          //numero de hojas o duracion de pelicula-podcast
         float precio;       //precio
 
-        MaterialLectura(string& t, string& g, string& Material, string& a, string& e, string& genero, string& est, int h, float p);
+        MaterialLectura(string& titulo, string& grupo, string& tipoMaterial, string& autor, string& editorial, string& genero, string& estado, int hojas, float precio);
 };
 
 #endif

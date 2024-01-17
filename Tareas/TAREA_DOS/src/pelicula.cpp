@@ -1,6 +1,6 @@
 #include "pelicula.hpp"
 
-Pelicula::Pelicula(string& titulo, string& grupo, string& tipoMaterial, string& autor, string& editorial, string& genero, string& estado, int hojas, float precio, string& resumen, string& materialRelacionado) 
+Pelicula::Pelicula(string& titulo, string& grupo, string& tipoMaterial, string& autor,  string& genero, string& estado, int hojas, float precio, string& resumen, string& materialRelacionado) 
 : MaterialAudiovisual(titulo, grupo, tipoMaterial, autor, genero, estado, duracion, precio),resumen(resumen), materialRelacionado(materialRelacionado){}
 
 /*La funcion recibe el numero de hojas y devuelve si es cota, mediano o grande*/
