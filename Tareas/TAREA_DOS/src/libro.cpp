@@ -1,6 +1,7 @@
 #include "libro.hpp"
 
-Libro::Libro(string r, string materialR) : MaterialLectura(titulo, grupo, tipoMaterial, autor, editorial, genero, estado, hojas,precio),resumenL(r), materialRelacionadoL(materialR) {}
+Libro::Libro(string& titulo, string& grupo, string& tipoMaterial, string& autor,string& editorial, string& genero, string& estado, int hojas, float precio, string& resumen, string& materialRelacionado)
+:MaterialLectura(titulo, grupo, tipoMaterial, autor, editorial, genero, estado, hojas,precio),resumen(resumen), materialRelacionado(materialRelacionado) {}
 
 /*La funcion recibe el numero de hojas y devuelve si es cota, mediano o grande*/
 string Libro::hojasLibro(){
@@ -31,6 +32,6 @@ void Libro :: informacioLibro(){
     cout<<"Estado: "<<estado<<endl;
     cout<<"Cantidad de hojas: "<<hojas<<". Es considerado "<<hojasLibro()<<endl;
     cout<<"Precio: "<<precio<<endl;
-    cout<<"Resumen: "<<resumenL<<endl;
-    cout<<"Material relacionado: "<<materialRelacionadoL<<endl;
+    cout<<"Resumen: "<<resumen<<endl;
+    cout<<"Material relacionado: "<<materialRelacionado<<endl;
 }

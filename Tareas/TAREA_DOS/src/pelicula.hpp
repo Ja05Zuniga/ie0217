@@ -4,7 +4,8 @@
 
 class Pelicula : public MaterialAudiovisual{
     public:
-        Pelicula(string resumenP, string materialRelacionadoP);
+        Pelicula(string& titulo, string& grupo, string& tipoMaterial, string& autor, string& editorial, string& genero, string& estado, int hojas, float precio,
+        string& resumen, string& materialRelacionado);
 
         /*La funcion recibe el numero de hojas y devuelve si es cota, mediano o grande*/
         string largoPelicula ();
@@ -12,8 +13,8 @@ class Pelicula : public MaterialAudiovisual{
         /*Funcion encargada de imprimir la informacion necesaria*/
         void informacioPelicula();
    
-        string resumenP;
-        string materialRelacionadoP;
+        string resumen;
+        string materialRelacionado;
 };
 
 #endif

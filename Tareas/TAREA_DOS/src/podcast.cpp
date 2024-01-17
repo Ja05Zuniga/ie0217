@@ -1,6 +1,7 @@
 #include "podcast.hpp"
 
-Podcast::Podcast(string Presumen, string PmaterialRelacionado) : MaterialAudiovisual(titulo, grupo, tipoMaterial, autor, genero, estado, duracion, precioAudio),Presumen(Presumen), PmaterialRelacionado(PmaterialRelacionado){}
+Podcast::Podcast(string& titulo, string& grupo, string& tipoMaterial, string& autor, string& editorial, string& genero, string& estado, int hojas, float precio, string& Presumen, string& PmaterialRelacionado) 
+: MaterialAudiovisual(titulo, grupo, tipoMaterial, autor, genero, estado, duracion, precio),resumen(resumen), materialRelacionado(materialRelacionado){}
 
 /*La funcion recibe el numero de hojas y devuelve si es cota, mediano o grande*/
 string Podcast::largoPodcast(){
@@ -29,7 +30,7 @@ void Podcast :: informacioPodcast(){
     cout<<"Genero: "<<genero<<endl;
     cout<<"Estado: "<<estado<<endl;
     cout<<"Duracion: "<<duracion<<" minutos"<<". Es considerado "<<largoPodcast()<<endl;
-    cout<<"Precio: "<<precioAudio<<endl;
-    cout<<"Resumen: "<<Presumen<<endl;
-    cout<<"Material relacionado: "<<PmaterialRelacionado<<endl;
+    cout<<"Precio: "<<precio<<endl;
+    cout<<"Resumen: "<<resumen<<endl;
+    cout<<"Material relacionado: "<<materialRelacionado<<endl;
 }

@@ -1,7 +1,7 @@
 #include "materialLectura.hpp"
 
-MaterialLectura::MaterialLectura(string t, string g, string Material, string a, string e, string genero, 
-string est, int h, float p)
+MaterialLectura::MaterialLectura(string& t, string& g, string& Material, string& a, string& e, string& genero, 
+string& est, int h, float p)
 {
     this->titulo=t;
     this->grupo=g;

@@ -1,17 +1,13 @@
 #include "materialOrdenado.hpp"
 
-MaterialOrdenado::MaterialOrdenado() : frente(nullptr), final(nullptr), Noticia(Nresumen, NmaterialRelacionado), 
-Libro(resumenL, materialRelacionadoL), Pelicula(resumenP, materialRelacionadoP), Podcast(Presumen, PmaterialRelacionado){}
+MaterialOrdenado::MaterialOrdenado(string& titulo, string& grupo, string& tipoMaterial, string& autor, string& editorial, string& genero, string& estado, int hojas, float precio, string& resumen, string& materialRelacionado) 
+: frente(nullptr), final(nullptr), 
+Noticia(titulo, grupo, tipoMaterial, autor, editorial, genero, estado, hojas,precio, resumen, materialRelacionado), 
+Libro(titulo, grupo, tipoMaterial, autor, editorial, genero, estado, hojas,precio, resumen, materialRelacionado), 
+Pelicula(titulo, grupo, tipoMaterial, autor,  genero, estado, hojas,precio, resumen, materialRelacionado), 
+Podcast(titulo, grupo, tipoMaterial, autor,  genero, estado, hojas,precio, resumen, materialRelacionado){
 
-MaterialOrdenado::~MaterialOrdenado() {
-    while (frente != nullptr) {
-        Nodo* temp = frente;
-        frente = frente->siguiente;
-        delete temp->dato;
-        delete temp;
-    }
 }
-
 // Función para añadir un material
 void MaterialOrdenado::agregarMaterial(MaterialLectura* material) {
     Nodo* nuevoNodo = new Nodo{material, nullptr};

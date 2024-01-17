@@ -9,11 +9,9 @@
 class MaterialOrdenado : public Libro, public Pelicula, public Noticia, public Podcast{
     public:
     //constructor 
-    MaterialOrdenado();
+    MaterialOrdenado(string& titulo, string& grupo, string& tipoMaterial, string& autor, 
+    string& editorial, string& genero, string& estado, int hojas, float precio, string& resumen, string& materialRelacionado);
     
-    //Destructor para liberar la memoria
-    ~MaterialOrdenado();
-
     // Función para añadir un material
     void agregarMaterial(MaterialLectura* material);
 

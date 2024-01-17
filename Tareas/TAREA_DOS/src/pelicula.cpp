@@ -1,6 +1,7 @@
 #include "pelicula.hpp"
 
-Pelicula::Pelicula(string resumen, string materialRelacionado) : MaterialAudiovisual(titulo, grupo, tipoMaterial, autor, genero, estado, duracion, precioAudio),resumenP(resumen), materialRelacionadoP(materialRelacionado){}
+Pelicula::Pelicula(string& titulo, string& grupo, string& tipoMaterial, string& autor, string& editorial, string& genero, string& estado, int hojas, float precio, string& resumen, string& materialRelacionado) 
+: MaterialAudiovisual(titulo, grupo, tipoMaterial, autor, genero, estado, duracion, precio),resumen(resumen), materialRelacionado(materialRelacionado){}
 
 /*La funcion recibe el numero de hojas y devuelve si es cota, mediano o grande*/
 string Pelicula::largoPelicula(){
@@ -30,7 +31,7 @@ void Pelicula :: informacioPelicula(){
     cout<<"Genero: "<<genero<<endl;
     cout<<"Estado: "<<estado<<endl;
     cout<<"Duracion: "<<duracion<<" minutos"<<". Es considerado "<<largoPelicula()<<endl;
-    cout<<"Precio: "<<precioAudio<<endl;
-    cout<<"Resumen: "<<resumenP<<endl;
-    cout<<"Material relacionado: "<<materialRelacionadoP<<endl;
+    cout<<"Precio: "<<precio<<endl;
+    cout<<"Resumen: "<<resumen<<endl;
+    cout<<"Material relacionado: "<<materialRelacionado<<endl;
 }

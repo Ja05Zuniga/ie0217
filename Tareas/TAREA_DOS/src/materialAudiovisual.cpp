@@ -1,5 +1,6 @@
 #include "materialAudiovisual.hpp"
-MaterialAudiovisual::MaterialAudiovisual(string t, string g, string Material, string a, string genero, string est, int h, float p)
+MaterialAudiovisual::MaterialAudiovisual(string& t, string& g, string& Material, string& a, string& genero, string& est, 
+int h, float p)
 {
     this->titulo=t;
     this->grupo=g;

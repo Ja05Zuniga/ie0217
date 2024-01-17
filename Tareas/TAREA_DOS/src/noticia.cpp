@@ -1,6 +1,7 @@
 #include "noticia.hpp"
 
-Noticia::Noticia(string resumen, string materialRelacionado) : MaterialLectura(titulo, grupo, tipoMaterial, autor, editorial, genero, estado, hojas,precio),Nresumen(resumen), NmaterialRelacionado(materialRelacionado){}
+Noticia::Noticia(string& titulo, string& grupo, string& tipoMaterial, string& autor, string& editorial, string& genero, string& estado, int hojas, float precio, string& resumen, string& materialRelacionado) 
+: MaterialLectura(titulo, grupo, tipoMaterial, autor, editorial, genero, estado, hojas,precio),resumen(resumen), materialRelacionado(materialRelacionado){}
 
 /*La funcion recibe el numero de hojas y devuelve si es cota, mediano o grande*/
 string Noticia::hojasNoticias(){
@@ -32,6 +33,6 @@ void Noticia :: informacioNoticia(){
     cout<<"Estado: "<<estado<<endl;
     cout<<"Cantidad de hojas: "<<hojas<<". Es considerado "<<hojasNoticias()<<endl;
     cout<<"Precio: "<<precio<<endl;
-    cout<<"Resumen: "<<Nresumen<<endl;
-    cout<<"Material relacionado: "<<NmaterialRelacionado<<endl;
+    cout<<"Resumen: "<<resumen<<endl;
+    cout<<"Material relacionado: "<<materialRelacionado<<endl;
 }
