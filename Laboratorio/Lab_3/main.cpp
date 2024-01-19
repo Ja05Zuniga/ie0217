@@ -39,9 +39,4 @@ catch(const std::exception& e)
 std::cout<<"Contactos en la agenda"<<std::endl;
 agenda.mostrarContacto();
 
-
- std::string patronBusqueda = "Juan";  // Puedes cambiar el patrón según tus necesidades
-std::list<Contacto<std::string>> resultados = agenda.buscarContactos(patronBusqueda);
-
-
 }
