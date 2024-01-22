@@ -12,9 +12,10 @@ class Matriz {
 public:
     Matriz();
     vector<vector<T>> ingresarMatriz();
-    T operacionTipo();
+    T operacionTipo(T operador);
 private:
     T ingresarDato(const string& mensaje);
 };
-#endif
+
 #include "matriz.cpp"
+#endif

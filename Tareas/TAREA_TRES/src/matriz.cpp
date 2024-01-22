@@ -1,7 +1,7 @@
 #include "matriz.hpp"
 
-template <typename T>
-Matriz<T>::Matriz() {}
+//template <typename T>
+//Matriz<T>::Matriz() {}
 
 template <typename T>
 T Matriz<T>::ingresarDato(const string& mensaje) {
@@ -35,7 +35,7 @@ vector<vector<T>> Matriz<T>::ingresarMatriz() {
             cout << "Ingrese el elemento [" << i + 1 << "][" << j + 1 << "]: ";
             try {
                // Intentar leer el elemento de la matriz
-                matriz[i][j] = ingresarDato<T>("");
+                matriz[i][j] = ingresarDato("");
 
             } catch (const runtime_error& e) {
                 cerr << e.what() << endl;
@@ -47,12 +47,11 @@ vector<vector<T>> Matriz<T>::ingresarMatriz() {
 }
 
 template <typename T>
-T Matriz<T>::operacionTipo() {
-    T operador;
+T Matriz<T>::operacionTipo(T operador) {
     try {
         // Validación de la opción ingresada
         while (operador < 1 || operador > 3) {
-            operador = ingresarDato<T>("Error. Ingrese un valor dentro de las opciones (1. para suma, 2. para resta, 3. para multiplicación): ");
+            operador = ingresarDato("Error. Ingrese un valor dentro de las opciones (1. para suma, 2. para resta, 3. para multiplicación): ");
         }
     } catch (const std::exception& e) {
         std::cerr << e.what() << '\n';

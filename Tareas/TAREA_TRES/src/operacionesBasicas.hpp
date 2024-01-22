@@ -30,7 +30,7 @@ public:
     operacionesBasicas operator*(const operacionesBasicas& other) const;
 
     // Método para validar operaciones
-    bool validacion(T filas2, T columnas2, T opcion);
+    bool validacion(T filas1, T columnas1,T filas2, T columnas2, T opcion);
 
     // Método para imprimir la matriz
     void print() const;
