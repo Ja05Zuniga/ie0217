@@ -1,18 +1,20 @@
 #ifndef MATRIZ_HPP
 #define MATRIZ_HPP
-
 #include <iostream>
 #include <vector>
-#include <limits>
 #include <stdexcept>
+#include <limits>
+
 using namespace std;
 
 template <typename T>
-class Matriz{
-    public:
-    T ingresarDato(const std::string& mensaje);
-    vector<vector<T>> matrizDimencionesDatos();
+class Matriz {
+public:
+    Matriz();
+    vector<vector<T>> ingresarMatriz();
     T operacionTipo();
+private:
+    T ingresarDato(const string& mensaje);
 };
-#include "matriz.cpp"
 #endif
+#include "matriz.cpp"

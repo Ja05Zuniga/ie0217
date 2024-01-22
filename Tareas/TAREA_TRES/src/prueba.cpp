@@ -5,6 +5,7 @@
 
 using namespace std;
 
+//Dentro de la clase matriz
 template <typename T>
 T ingresarDato(const string& mensaje) {
     T dato;
@@ -24,24 +25,11 @@ T ingresarDato(const string& mensaje) {
 
 template <typename T>
 vector<vector<T>> ingresarMatriz(T filas, T columnas) {
-    
-/*
-    try {
-        // Pedir al usuario el número de filas de la matriz
-        filas = ingresarDato<T>("Ingrese el número de filas de la matriz: ");
-
-        // Pedir al usuario el número de columnas de la matriz
-        columnas = ingresarDato<T>("Ingrese el número de columnas de la matriz: ");
-    } catch (const runtime_error& e) {
-        cerr << e.what() << endl;
-        throw; // Salir del programa sin procesar la matriz
-    }*/
-
     // Declarar e inicializar la matriz
     vector<vector<T>> matriz(filas, vector<T>(columnas, 0));
 
     // Pedir al usuario los elementos de la matriz
-    cout << "Ingrese los elementos de la matriz:" << endl;
+    //cout << "Ingrese los elementos de la matriz:" << endl;
     for (int i = 0; i < filas; ++i) {
         for (int j = 0; j < columnas; ++j) {
             cout << "Ingrese el elemento [" << i + 1 << "][" << j + 1 << "]: ";
@@ -55,25 +43,12 @@ vector<vector<T>> ingresarMatriz(T filas, T columnas) {
             }
         }
     }
-
-    // Mostrar la matriz ingresada
-    cout << "La matriz ingresada es:" << endl;
-    for (int i = 0; i < filas; ++i) {
-        for (int j = 0; j < columnas; ++j) {
-            cout << matriz[i][j] << " ";
-        }
-        cout << endl;
-    }
-
     return matriz;
 }
-
 template <typename T>
 T operacionTipo(T operador) {
     
     try {
-        
-
         // Validación de la opción ingresada
         while (operador < 1 || operador > 3) {
             operador = ingresarDato<T>("Error. Ingrese un valor dentro de las opciones (1. para suma, 2. para resta, 3. para multiplicacion: ");
@@ -86,6 +61,9 @@ T operacionTipo(T operador) {
     return operador;
 }
 
+//Fin de la clase matriz
+
+//Inicio de la clase operacionesBasicas
 template <typename T>
 bool validacion(T filas1, T columnas1, T filas2, T columnas2, T opcion){
     switch (opcion) {
@@ -115,11 +93,142 @@ bool validacion(T filas1, T columnas1, T filas2, T columnas2, T opcion){
         return false;
     }
 }
+template <typename T>
+class operacionesBasicas {
+private:
+    std::vector<std::vector<T>> matriz; // Contenedor para los elementos de la matriz
+    size_t filas, columnas; // Número de filas y columnas
+
+public:
+    // Constructor
+    operacionesBasicas(size_t filas, size_t columnas) : filas(filas), columnas(columnas), matriz(filas, std::vector<T>(columnas, 0)) {}
+
+    // Función para sobrecargar el operador de suma
+    operacionesBasicas operator+(const operacionesBasicas& other) const {
+        operacionesBasicas result(filas, columnas);
+        for (size_t i = 0; i < filas; ++i) {
+            for (size_t j = 0; j < columnas; ++j) {
+                result.matriz[i][j] = matriz[i][j] + other.matriz[i][j];
+            }
+        }
+
+        return result;
+    }
+     // Función para sobrecargar el operador de resta
+    operacionesBasicas operator-(const operacionesBasicas& other) const {
+        operacionesBasicas result(filas, columnas);
+        for (size_t i = 0; i < filas; ++i) {
+            for (size_t j = 0; j < columnas; ++j) {
+                result.matriz[i][j] = matriz[i][j] - other.matriz[i][j];
+            }
+        }
+        
+        return result;
+    }
+     // Función para sobrecargar el operador de multiplicacion
+    operacionesBasicas operator*(const operacionesBasicas& other) const {
+        operacionesBasicas result(filas, columnas);
+        for (size_t i = 0; i < filas; ++i) {
+            for (size_t j = 0; j < columnas; ++j) {
+                result.matriz[i][j] = matriz[i][j] * other.matriz[i][j];
+            }
+        }
+        
+        return result;
+    }
+    // Función para ingresar elementos a la matriz
+    void ingresarElementos() {
+        matriz = ingresarMatriz<T>(filas, columnas);
+    }
+    void print() const {
+        for (int i = 0; i < filas; ++i) {
+            for (int j = 0; j < columnas; ++j) {
+                cout << matriz[i][j] << " ";
+            }
+            cout << endl;
+        }
+    }
+};
+//Fin de la clase operacionesBasicas
+/*
+//Inicio de la funcion imaginaria
+template <typename T>
+class OperacionCompleja {
+private:
+    std::vector<std::vector<std::complex<T>>> matriz; // Contenedor para los elementos de la matriz
+    size_t filas, columnas; // Número de filas y columnas
+
+public:
+    // Constructor
+    OperacionCompleja(size_t filas, size_t columnas) : filas(filas), columnas(columnas), matriz(filas, std::vector<std::complex<T>>(columnas, 0)) {}
+
+    // Función para sobrecargar el operador de suma
+    OperacionCompleja operator+(const OperacionCompleja& other) const {
+        OperacionCompleja result(filas, columnas);
+        for (size_t i = 0; i < filas; ++i) {
+            for (size_t j = 0; j < columnas; ++j) {
+                result.matriz[i][j] = matriz[i][j] + other.matriz[i][j];
+            }
+        }
+        return result;
+    }
+
+    // Función para sobrecargar el operador de resta
+    OperacionCompleja operator-(const OperacionCompleja& other) const {
+        OperacionCompleja result(filas, columnas);
+        for (size_t i = 0; i < filas; ++i) {
+            for (size_t j = 0; j < columnas; ++j) {
+                result.matriz[i][j] = matriz[i][j] - other.matriz[i][j];
+            }
+        }
+        return result;
+    }
+
+    // Función para sobrecargar el operador de multiplicación
+    OperacionCompleja operator*(const OperacionCompleja& other) const {
+        OperacionCompleja result(filas, columnas);
+        for (size_t i = 0; i < filas; ++i) {
+            for (size_t j = 0; j < columnas; ++j) {
+                result.matriz[i][j] = matriz[i][j] * other.matriz[i][j];
+            }
+        }
+        return result;
+    }
+
+    // Función para ingresar elementos a la matriz de números complejos
+    void ingresarElementos() {
+        for (size_t i = 0; i < filas; ++i) {
+            for (size_t j = 0; j < columnas; ++j) {
+                cout << "Ingrese la parte real del elemento [" << i + 1 << "][" << j + 1 << "]: ";
+                T realPart;
+                cin >> realPart;
+
+                cout << "Ingrese la parte imaginaria del elemento [" << i + 1 << "][" << j + 1 << "]: ";
+                T imagPart;
+                cin >> imagPart;
+
+                matriz[i][j] = std::complex<T>(realPart, imagPart);
+            }
+        }
+    }
+
+    // Función para imprimir la matriz de números complejos
+    void print() const {
+        for (size_t i = 0; i < filas; ++i) {
+            for (size_t j = 0; j < columnas; ++j) {
+                cout << matriz[i][j] << " ";
+            }
+            cout << endl;
+        }
+    }
+};
+//Fin de la clase imaginaria
+*/
 
 
 int main() {
     int columnas1, filas1, opcion, filas2, columnas2;
-
+/*
         // Pedir al usuario el número de filas de la matriz
         filas1 = ingresarDato<int>("Ingrese el número de filas de la matriz: ");
         // Pedir al usuario el número de columnas de la matriz
@@ -143,6 +252,33 @@ int main() {
             cout<<"Operacion valida"<<endl;
         }else {cout<<"Operacion invalida"<<endl;}
         //cout << "Operación seleccionada: " << op<<" safsaf " << comprobacion<<endl;
+        
+*/  
 
+
+    cout<<"Primera matriz"<<endl;
+    filas1 = ingresarDato<int>("Ingrese el número de filas de la matriz: ");
+    columnas1 = ingresarDato<int>("Ingrese el número de columnas de la matriz: ");
+
+    cout<<"Segunda matriz"<<endl;
+    // Pedir al usuario el número de filas de la matriz
+    filas2 = ingresarDato<int>("Ingrese el número de filas de la matriz: ");
+    // Pedir al usuario el número de columnas de la matriz
+    columnas2 = ingresarDato<int>("Ingrese el número de columnas de la matriz: ");
+    operacionesBasicas<int> A(filas1, columnas1);
+    cout<<"Primera matriz"<<endl;
+    A.ingresarElementos();
+    A.print();
+
+    // Ingresar elementos para la segunda matriz
+    operacionesBasicas<int> B(filas2, columnas2);
+    cout<<"Segunda matriz"<<endl;
+    B.ingresarElementos();
+    B.print();
+
+    // Sumar las matrices e imprimir el resultado
+    operacionesBasicas<int> C = A * B;
+    cout << "Resultado de la suma:" << endl;
+    C.print();
     return 0;
 }
