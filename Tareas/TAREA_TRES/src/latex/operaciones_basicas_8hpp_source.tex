@@ -1,0 +1,26 @@
+\doxysection{operaciones\+Basicas.\+hpp}
+\hypertarget{operaciones_basicas_8hpp_source}{}\label{operaciones_basicas_8hpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ OPERACIONESBASICAS\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ OPERACIONESBASICAS\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00011\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classoperaciones_basicas}{operacionesBasicas}}\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ validarDimensiones(\textcolor{keyword}{const}\ std::vector<std::vector<T>>\&\ matriz1,\ \textcolor{keyword}{const}\ std::vector<std::vector<T>>\&\ matriz2);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{static}\ std::vector<std::vector<T>>\ \mbox{\hyperlink{classoperaciones_basicas_a4a2e7229122e2641b34fd2e5b51b61d7}{sumar}}(\textcolor{keyword}{const}\ std::vector<std::vector<T>>\&\ matriz1,\ \textcolor{keyword}{const}\ std::vector<std::vector<T>>\&\ matriz2);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{static}\ std::vector<std::vector<T>>\ \mbox{\hyperlink{classoperaciones_basicas_aca95b64477f97e8622f4e4d2d92ca45c}{restar}}(\textcolor{keyword}{const}\ std::vector<std::vector<T>>\&\ matriz1,\ \textcolor{keyword}{const}\ std::vector<std::vector<T>>\&\ matriz2);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{static}\ std::vector<std::vector<T>>\ \mbox{\hyperlink{classoperaciones_basicas_a51da6471b70ce1c82043a9c45971dc3f}{multiplicar}}(\textcolor{keyword}{const}\ std::vector<std::vector<T>>\&\ matriz1,\ \textcolor{keyword}{const}\ std::vector<std::vector<T>>\&\ matriz2);}
+\DoxyCodeLine{00049\ \ \ \ \ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classoperaciones_basicas_a2ea9335a725934f7b212d7df66a1054d}{imprimirMatriz}}(\textcolor{keyword}{const}\ std::vector<std::vector<T>>\&\ matriz);}
+\DoxyCodeLine{00055\ \};}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{operaciones_basicas_8cpp}{operacionesBasicas.cpp}}"{}}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#endif\ }}
+
+\end{DoxyCode}

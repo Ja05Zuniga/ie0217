@@ -1,0 +1,28 @@
+\doxysection{operacion\+Compleja.\+hpp}
+\hypertarget{operacion_compleja_8hpp_source}{}\label{operacion_compleja_8hpp_source}\mbox{\hyperlink{operacion_compleja_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ OPERACIONCOMPLEJA\_HPP}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ OPERACIONCOMPLEJA\_HPP}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <complex>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classoperacion_compleja}{operacionCompleja}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ validarDimensiones(\textcolor{keyword}{const}\ std::vector<std::vector<std::complex<T>>>\&\ matriz1,\ \textcolor{keyword}{const}\ std::vector<std::vector<std::complex<T>>>\&\ matriz2);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{static}\ std::vector<std::vector<std::complex<T>>>\ \mbox{\hyperlink{classoperacion_compleja_aeb82792dd82b478dd5bbb369fc0bdd2c}{sumaCompleja}}(\textcolor{keyword}{const}\ std::vector<std::vector<std::complex<T>>>\&\ matriz1,\ \textcolor{keyword}{const}\ std::vector<std::vector<std::complex<T>>>\&\ matriz2);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{static}\ std::vector<std::vector<std::complex<T>>>\ \mbox{\hyperlink{classoperacion_compleja_acc50f93e3639c40edaac9f44bbb7c9c2}{restaCompleja}}(\textcolor{keyword}{const}\ std::vector<std::vector<std::complex<T>>>\&\ matriz1,\ \textcolor{keyword}{const}\ std::vector<std::vector<std::complex<T>>>\&\ matriz2);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{static}\ std::vector<std::vector<std::complex<T>>>\ \mbox{\hyperlink{classoperacion_compleja_a10842b85144ff192232c92156e74119c}{multiplicaCompleja}}(\textcolor{keyword}{const}\ std::vector<std::vector<std::complex<T>>>\&\ matriz1,\ \textcolor{keyword}{const}\ std::vector<std::vector<std::complex<T>>>\&\ matriz2);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classoperacion_compleja_aeac21af4e5eef3b35f372916a3039b3d}{imprimirMatriz}}(\textcolor{keyword}{const}\ std::vector<std::vector<std::complex<T>>>\&\ matriz);}
+\DoxyCodeLine{00060\ \};}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{operacion_compleja_8cpp}{operacionCompleja.cpp}}"{}}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

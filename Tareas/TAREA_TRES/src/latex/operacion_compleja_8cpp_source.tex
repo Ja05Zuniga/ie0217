@@ -1,0 +1,75 @@
+\doxysection{operacion\+Compleja.\+cpp}
+\hypertarget{operacion_compleja_8cpp_source}{}\label{operacion_compleja_8cpp_source}\mbox{\hyperlink{operacion_compleja_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{operacion_compleja_8hpp}{operacionCompleja.hpp}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00008\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classoperacion_compleja}{operacionCompleja<T>::validarDimensiones}}(\textcolor{keyword}{const}\ std::vector<std::vector<std::complex<T>>>\&\ matriz1,\ \textcolor{keyword}{const}\ std::vector<std::vector<std::complex<T>>>\&\ matriz2)\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordflow}{return}\ (matriz1.size()\ ==\ matriz2.size())\ \&\&\ (matriz1[0].size()\ ==\ matriz2[0].size());}
+\DoxyCodeLine{00010\ \}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00013\ std::vector<std::vector<std::complex<T>>>\ \mbox{\hyperlink{classoperacion_compleja_aeb82792dd82b478dd5bbb369fc0bdd2c}{operacionCompleja<T>::sumaCompleja}}(\textcolor{keyword}{const}\ std::vector<std::vector<std::complex<T>>>\&\ matriz1,\ \textcolor{keyword}{const}\ std::vector<std::vector<std::complex<T>>>\&\ matriz2)\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordflow}{if}\ (!validarDimensiones(matriz1,\ matriz2))\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Las\ matrices\ no\ tienen\ las\ mismas\ dimensiones\ para\ la\ suma."{}});}
+\DoxyCodeLine{00016\ \ \ \ \ \}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ std::vector<std::vector<std::complex<T>>>\ resultado(matriz1.size(),\ std::vector<std::complex<T>>(matriz1[0].size()));}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ matriz1.size();\ ++i)\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ j\ =\ 0;\ j\ <\ matriz1[0].size();\ ++j)\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ resultado[i][j]\ =\ matriz1[i][j]\ +\ matriz2[i][j];}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00024\ \ \ \ \ \}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordflow}{return}\ resultado;}
+\DoxyCodeLine{00027\ \}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00030\ std::vector<std::vector<std::complex<T>>>\ \mbox{\hyperlink{classoperacion_compleja_acc50f93e3639c40edaac9f44bbb7c9c2}{operacionCompleja<T>::restaCompleja}}(\textcolor{keyword}{const}\ std::vector<std::vector<std::complex<T>>>\&\ matriz1,\ \textcolor{keyword}{const}\ std::vector<std::vector<std::complex<T>>>\&\ matriz2)\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordflow}{if}\ (!validarDimensiones(matriz1,\ matriz2))\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Las\ matrices\ no\ tienen\ las\ mismas\ dimensiones\ para\ la\ resta."{}});}
+\DoxyCodeLine{00033\ \ \ \ \ \}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ std::vector<std::vector<std::complex<T>>>\ resultado(matriz1.size(),\ std::vector<std::complex<T>>(matriz1[0].size()));}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ matriz1.size();\ ++i)\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ j\ =\ 0;\ j\ <\ matriz1[0].size();\ ++j)\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ resultado[i][j]\ =\ matriz1[i][j]\ -\/\ matriz2[i][j];}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00041\ \ \ \ \ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordflow}{return}\ resultado;}
+\DoxyCodeLine{00044\ \}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00047\ std::vector<std::vector<std::complex<T>>>\ \mbox{\hyperlink{classoperacion_compleja_a10842b85144ff192232c92156e74119c}{operacionCompleja<T>::multiplicaCompleja}}(\textcolor{keyword}{const}\ std::vector<std::vector<std::complex<T>>>\&\ matriz1,\ \textcolor{keyword}{const}\ std::vector<std::vector<std::complex<T>>>\&\ matriz2)\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordflow}{if}\ (matriz1[0].size()\ !=\ matriz2.size())\ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}El\ número\ de\ columnas\ de\ la\ primera\ matriz\ no\ coincide\ con\ el\ número\ de\ filas\ de\ la\ segunda\ matriz\ para\ la\ multiplicación."{}});}
+\DoxyCodeLine{00050\ \ \ \ \ \}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ std::vector<std::vector<std::complex<T>>>\ resultado(matriz1.size(),\ std::vector<std::complex<T>>(matriz1[0].size()));}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ matriz1.size();\ ++i)\ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ j\ =\ 0;\ j\ <\ matriz2[0].size();\ ++j)\ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ k\ =\ 0;\ k\ <\ matriz1[0].size();\ ++k)\ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ resultado[i][j]\ +=\ matriz1[i][k]\ *\ matriz2[k][j];}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00060\ \ \ \ \ \}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordflow}{return}\ resultado;}
+\DoxyCodeLine{00063\ \}}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00066\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classoperacion_compleja_aeac21af4e5eef3b35f372916a3039b3d}{operacionCompleja<T>::imprimirMatriz}}(\textcolor{keyword}{const}\ std::vector<std::vector<std::complex<T>>>\&\ matriz)\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ fila\ :\ matriz)\ \{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ elemento\ :\ fila)\ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ elemento\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{00072\ \ \ \ \ \}}
+\DoxyCodeLine{00073\ \}}
+
+\end{DoxyCode}

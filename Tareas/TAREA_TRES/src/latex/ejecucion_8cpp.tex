@@ -1,0 +1,76 @@
+\doxysection{ejecucion.\+cpp File Reference}
+\hypertarget{ejecucion_8cpp}{}\label{ejecucion_8cpp}\index{ejecucion.cpp@{ejecucion.cpp}}
+
+
+Contiene las funciones para realizar operaciones con matrices y mostrar resultados.  
+
+
+{\ttfamily \#include "{}matriz.\+hpp"{}}\newline
+{\ttfamily \#include "{}operaciones\+Basicas.\+hpp"{}}\newline
+{\ttfamily \#include "{}operacion\+Compleja.\+hpp"{}}\newline
+{\ttfamily \#include $<$complex$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{ejecucion_8cpp_af6b2e1a66391afc8020c7e47af5aacf2}{funcion\+Imprimir\+Datos}} (int operador\+Op, vector$<$ vector$<$ T $>$ $>$ matriz1, vector$<$ vector$<$ T $>$ $>$matriz2)
+\begin{DoxyCompactList}\small\item\em Función para imprimir el resultado de operaciones básicas en matrices. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{ejecucion_8cpp_aedd259cede7ced575db2b10bce71f7e0}{funcion\+Imprimir\+Datos\+Complejo}} (int operador\+Op, vector$<$ vector$<$ complex$<$ T $>$ $>$ $>$ matriz1, vector$<$ vector$<$ complex$<$ T $>$ $>$ $>$matriz2)
+\begin{DoxyCompactList}\small\item\em Función para imprimir el resultado de operaciones con matrices complejas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Contiene las funciones para realizar operaciones con matrices y mostrar resultados. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{ejecucion_8cpp_af6b2e1a66391afc8020c7e47af5aacf2}\label{ejecucion_8cpp_af6b2e1a66391afc8020c7e47af5aacf2} 
+\index{ejecucion.cpp@{ejecucion.cpp}!funcionImprimirDatos@{funcionImprimirDatos}}
+\index{funcionImprimirDatos@{funcionImprimirDatos}!ejecucion.cpp@{ejecucion.cpp}}
+\doxysubsubsection{\texorpdfstring{funcionImprimirDatos()}{funcionImprimirDatos()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void funcion\+Imprimir\+Datos (\begin{DoxyParamCaption}\item[{int}]{operador\+Op,  }\item[{vector$<$ vector$<$ T $>$ $>$}]{matriz1,  }\item[{vector$<$ vector$<$ T $>$ $>$}]{matriz2 }\end{DoxyParamCaption})}
+
+
+
+Función para imprimir el resultado de operaciones básicas en matrices. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Tipo de dato de la matriz (puede ser int, float, double.). \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em operador\+Op} & Operación a realizar (1 para suma, 2 para resta, 3 para multiplicación). \\
+\hline
+{\em matriz1} & Primera matriz. \\
+\hline
+{\em matriz2} & Segunda matriz. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{ejecucion_8cpp_aedd259cede7ced575db2b10bce71f7e0}\label{ejecucion_8cpp_aedd259cede7ced575db2b10bce71f7e0} 
+\index{ejecucion.cpp@{ejecucion.cpp}!funcionImprimirDatosComplejo@{funcionImprimirDatosComplejo}}
+\index{funcionImprimirDatosComplejo@{funcionImprimirDatosComplejo}!ejecucion.cpp@{ejecucion.cpp}}
+\doxysubsubsection{\texorpdfstring{funcionImprimirDatosComplejo()}{funcionImprimirDatosComplejo()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void funcion\+Imprimir\+Datos\+Complejo (\begin{DoxyParamCaption}\item[{int}]{operador\+Op,  }\item[{vector$<$ vector$<$ complex$<$ T $>$ $>$ $>$}]{matriz1,  }\item[{vector$<$ vector$<$ complex$<$ T $>$ $>$ $>$}]{matriz2 }\end{DoxyParamCaption})}
+
+
+
+Función para imprimir el resultado de operaciones con matrices complejas. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Tipo de dato de la matriz (puede ser int, float, double.). \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em operador\+Op} & Operación a realizar (1 para suma, 2 para resta, 3 para multiplicación). \\
+\hline
+{\em matriz1} & Primera matriz. \\
+\hline
+{\em matriz2} & Segunda matriz. \\
+\hline
+\end{DoxyParams}

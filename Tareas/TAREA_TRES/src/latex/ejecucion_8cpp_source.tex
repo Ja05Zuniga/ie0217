@@ -1,0 +1,88 @@
+\doxysection{ejecucion.\+cpp}
+\hypertarget{ejecucion_8cpp_source}{}\label{ejecucion_8cpp_source}\mbox{\hyperlink{ejecucion_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{matriz_8hpp}{matriz.hpp}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}operacionesBasicas.hpp"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{operacion_compleja_8hpp}{operacionCompleja.hpp}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <complex>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00020\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ejecucion_8cpp_af6b2e1a66391afc8020c7e47af5aacf2}{funcionImprimirDatos}}(\textcolor{keywordtype}{int}\ operadorOp,\ vector<vector<T>>\ matriz1,\ vector<vector<T>>matriz2)\{\ \ \ \ }
+\DoxyCodeLine{00021\ \ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordflow}{switch}\ (operadorOp)}
+\DoxyCodeLine{00023\ \ \ \ \ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordflow}{case}\ 1:}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Sumar\ e\ imprimir\ las\ matrices}}
+\DoxyCodeLine{00026\ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ resultado\ =\ \mbox{\hyperlink{classoperaciones_basicas_a4a2e7229122e2641b34fd2e5b51b61d7}{operacionesBasicas<T>::sumar}}(matriz1,\ matriz2);}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classoperaciones_basicas_a2ea9335a725934f7b212d7df66a1054d}{operacionesBasicas<T>::imprimirMatriz}}(resultado);}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (\textcolor{keyword}{const}\ std::invalid\_argument\&\ e)\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Error:\ "{}}\ <<\ e.what()\ <<\ std::endl;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordflow}{case}\ 2:}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{comment}{//restar\ e\ imprimir\ las\ matrices}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ resultado\ =\ \mbox{\hyperlink{classoperaciones_basicas_aca95b64477f97e8622f4e4d2d92ca45c}{operacionesBasicas<T>::restar}}(matriz1,\ matriz2);}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classoperaciones_basicas_a2ea9335a725934f7b212d7df66a1054d}{operacionesBasicas<T>::imprimirMatriz}}(resultado);}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (\textcolor{keyword}{const}\ std::invalid\_argument\&\ e)\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Error:\ "{}}\ <<\ e.what()\ <<\ std::endl;}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordflow}{case}\ 3:}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{//Sumar\ e\ imprimir\ las\ matrices}}
+\DoxyCodeLine{00045\ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ resultado\ =\ \mbox{\hyperlink{classoperaciones_basicas_a51da6471b70ce1c82043a9c45971dc3f}{operacionesBasicas<T>::multiplicar}}(matriz1,\ matriz2);}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classoperaciones_basicas_a2ea9335a725934f7b212d7df66a1054d}{operacionesBasicas<T>::imprimirMatriz}}(resultado);}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (\textcolor{keyword}{const}\ std::invalid\_argument\&\ e)\ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ std::cerr\ <<\ \textcolor{stringliteral}{"{}Error:\ "{}}\ <<\ e.what()\ <<\ std::endl;}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00054\ \ \ \ \ \}}
+\DoxyCodeLine{00055\ \}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00065\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00066\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{ejecucion_8cpp_aedd259cede7ced575db2b10bce71f7e0}{funcionImprimirDatosComplejo}}(\textcolor{keywordtype}{int}\ operadorOp,\ vector<vector<complex<T>>>\ matriz1,\ vector<vector<complex<T>>>matriz2)\{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordflow}{switch}\ (operadorOp)}
+\DoxyCodeLine{00069\ \ \ \ \ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordflow}{case}\ 1:}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Sumar\ e\ imprimir\ las\ matrices}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ resultado\ =\ \mbox{\hyperlink{classoperacion_compleja_aeb82792dd82b478dd5bbb369fc0bdd2c}{operacionCompleja<T>::sumaCompleja}}(matriz1,\ matriz2);}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classoperacion_compleja_aeac21af4e5eef3b35f372916a3039b3d}{operacionCompleja<T>::imprimirMatriz}}(resultado);}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (\textcolor{keyword}{const}\ invalid\_argument\&\ e)\ \{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}Error:\ "{}}\ <<\ e.what()\ <<\ endl;}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordflow}{case}\ 2:}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{comment}{//restar\ e\ imprimir\ las\ matrices}}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ resultado\ =\ \mbox{\hyperlink{classoperacion_compleja_acc50f93e3639c40edaac9f44bbb7c9c2}{operacionCompleja<T>::restaCompleja}}(matriz1,\ matriz2);}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classoperacion_compleja_aeac21af4e5eef3b35f372916a3039b3d}{operacionCompleja<T>::imprimirMatriz}}(resultado);}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (\textcolor{keyword}{const}\ invalid\_argument\&\ e)\ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}Error:\ "{}}\ <<\ e.what()\ <<\ endl;}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordflow}{case}\ 3:}
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{comment}{//Sumar\ e\ imprimir\ las\ matrices}}
+\DoxyCodeLine{00092\ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ resultado\ =\ \mbox{\hyperlink{classoperacion_compleja_a10842b85144ff192232c92156e74119c}{operacionCompleja<T>::multiplicaCompleja}}(matriz1,\ matriz2);}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classoperacion_compleja_aeac21af4e5eef3b35f372916a3039b3d}{operacionCompleja<T>::imprimirMatriz}}(resultado);}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (\textcolor{keyword}{const}\ std::invalid\_argument\&\ e)\ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}Error:\ "{}}\ <<\ e.what()\ <<\ endl;}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00102\ \ \ \ \ \}}
+\DoxyCodeLine{00103\ \}}
+
+\end{DoxyCode}

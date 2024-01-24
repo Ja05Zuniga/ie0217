@@ -1,0 +1,137 @@
+\doxysection{operaciones\+Basicas\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classoperaciones_basicas}{}\label{classoperaciones_basicas}\index{operacionesBasicas$<$ T $>$@{operacionesBasicas$<$ T $>$}}
+
+
+Clase que proporciona operaciones como suma, resta, multiplicación con matrices.  
+
+
+
+
+{\ttfamily \#include $<$operaciones\+Basicas.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \mbox{\hyperlink{classoperaciones_basicas_a4a2e7229122e2641b34fd2e5b51b61d7}{sumar}} (const std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \&matriz1, const std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \&matriz2)
+\begin{DoxyCompactList}\small\item\em Método para sumar matrices. \end{DoxyCompactList}\item 
+static std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \mbox{\hyperlink{classoperaciones_basicas_aca95b64477f97e8622f4e4d2d92ca45c}{restar}} (const std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \&matriz1, const std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \&matriz2)
+\begin{DoxyCompactList}\small\item\em Método para restar matrices. \end{DoxyCompactList}\item 
+static std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \mbox{\hyperlink{classoperaciones_basicas_a51da6471b70ce1c82043a9c45971dc3f}{multiplicar}} (const std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \&matriz1, const std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \&matriz2)
+\begin{DoxyCompactList}\small\item\em Método para multiplicar matrices. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classoperaciones_basicas_a2ea9335a725934f7b212d7df66a1054d}{imprimir\+Matriz}} (const std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \&matriz)
+\begin{DoxyCompactList}\small\item\em Método para imprimir una matriz en la consola. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class operaciones\+Basicas$<$ T $>$}
+Clase que proporciona operaciones como suma, resta, multiplicación con matrices. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Tipo de dato de la matriz (puede ser float, double, etc.). \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classoperaciones_basicas_a2ea9335a725934f7b212d7df66a1054d}\label{classoperaciones_basicas_a2ea9335a725934f7b212d7df66a1054d} 
+\index{operacionesBasicas$<$ T $>$@{operacionesBasicas$<$ T $>$}!imprimirMatriz@{imprimirMatriz}}
+\index{imprimirMatriz@{imprimirMatriz}!operacionesBasicas$<$ T $>$@{operacionesBasicas$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{imprimirMatriz()}{imprimirMatriz()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classoperaciones_basicas}{operaciones\+Basicas}}$<$ T $>$\+::imprimir\+Matriz (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \&}]{matriz }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Método para imprimir una matriz en la consola. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matriz} & \doxylink{class_matriz}{Matriz} a imprimir. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classoperaciones_basicas_a51da6471b70ce1c82043a9c45971dc3f}\label{classoperaciones_basicas_a51da6471b70ce1c82043a9c45971dc3f} 
+\index{operacionesBasicas$<$ T $>$@{operacionesBasicas$<$ T $>$}!multiplicar@{multiplicar}}
+\index{multiplicar@{multiplicar}!operacionesBasicas$<$ T $>$@{operacionesBasicas$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{multiplicar()}{multiplicar()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \mbox{\hyperlink{classoperaciones_basicas}{operaciones\+Basicas}}$<$ T $>$\+::multiplicar (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \&}]{matriz1,  }\item[{const std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \&}]{matriz2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Método para multiplicar matrices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matriz1} & Primera matriz a multiplicar. \\
+\hline
+{\em matriz2} & Segunda matriz a multiplicar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Resultado de la multiplicación de las matrices. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & si las dimensiones no son compatibles para la multiplicación. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classoperaciones_basicas_aca95b64477f97e8622f4e4d2d92ca45c}\label{classoperaciones_basicas_aca95b64477f97e8622f4e4d2d92ca45c} 
+\index{operacionesBasicas$<$ T $>$@{operacionesBasicas$<$ T $>$}!restar@{restar}}
+\index{restar@{restar}!operacionesBasicas$<$ T $>$@{operacionesBasicas$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{restar()}{restar()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \mbox{\hyperlink{classoperaciones_basicas}{operaciones\+Basicas}}$<$ T $>$\+::restar (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \&}]{matriz1,  }\item[{const std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \&}]{matriz2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Método para restar matrices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matriz1} & \doxylink{class_matriz}{Matriz} a la que se resta. \\
+\hline
+{\em matriz2} & \doxylink{class_matriz}{Matriz} que se resta. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Resultado de la resta de las matrices. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & si las matrices no tienen las mismas dimensiones. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classoperaciones_basicas_a4a2e7229122e2641b34fd2e5b51b61d7}\label{classoperaciones_basicas_a4a2e7229122e2641b34fd2e5b51b61d7} 
+\index{operacionesBasicas$<$ T $>$@{operacionesBasicas$<$ T $>$}!sumar@{sumar}}
+\index{sumar@{sumar}!operacionesBasicas$<$ T $>$@{operacionesBasicas$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sumar()}{sumar()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \mbox{\hyperlink{classoperaciones_basicas}{operaciones\+Basicas}}$<$ T $>$\+::sumar (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \&}]{matriz1,  }\item[{const std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \&}]{matriz2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Método para sumar matrices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matriz1} & Primera matriz a sumar. \\
+\hline
+{\em matriz2} & Segunda matriz a sumar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Resultado de la suma de las matrices. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & si las matrices no tienen las mismas dimensiones. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+operaciones\+Basicas.\+hpp\item 
+\mbox{\hyperlink{operaciones_basicas_8cpp}{operaciones\+Basicas.\+cpp}}\end{DoxyCompactItemize}

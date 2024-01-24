@@ -1,0 +1,112 @@
+\doxysection{Matriz\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{class_matriz}{}\label{class_matriz}\index{Matriz$<$ T $>$@{Matriz$<$ T $>$}}
+
+
+Clase que representa una matriz y proporciona funciones para manipularla.  
+
+
+
+
+{\ttfamily \#include $<$matriz.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_matriz_a22a3874f58ac1ddadb7f1688fde20322}\label{class_matriz_a22a3874f58ac1ddadb7f1688fde20322} 
+{\bfseries Matriz} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto de la clase \doxylink{class_matriz}{Matriz}. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{class_matriz_a476df94c7c5a912e2aec25e6a1442101}{ingresar\+Dato}} (const string \&mensaje)
+\begin{DoxyCompactList}\small\item\em Función para ingresar un dato de tipo T desde la consola. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ T $>$ $>$ \mbox{\hyperlink{class_matriz_a0459d7cd81ae1eb0667aa51c9e4ee504}{ingresar\+Matriz}} ()
+\begin{DoxyCompactList}\small\item\em Función para ingresar una matriz de tipo T desde la consola. \end{DoxyCompactList}\item 
+vector$<$ vector$<$ std\+::complex$<$ T $>$ $>$ $>$ \mbox{\hyperlink{class_matriz_a9b80fb309e805607f93af762bfccb6e5}{ingresar\+Matriz\+Compleja}} ()
+\begin{DoxyCompactList}\small\item\em Función para ingresar una matriz compleja desde la consola. \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{class_matriz_aa77259b450a9aa061e4d2575a2ab74ca}{operacion\+Tipo}} (T operador)
+\begin{DoxyCompactList}\small\item\em Función para realizar operaciones en la matriz (suma, resta, multiplicación). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Matriz$<$ T $>$}
+Clase que representa una matriz y proporciona funciones para manipularla. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Tipo de dato de la matriz (puede ser int, float, double, etc.). \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_matriz_a476df94c7c5a912e2aec25e6a1442101}\label{class_matriz_a476df94c7c5a912e2aec25e6a1442101} 
+\index{Matriz$<$ T $>$@{Matriz$<$ T $>$}!ingresarDato@{ingresarDato}}
+\index{ingresarDato@{ingresarDato}!Matriz$<$ T $>$@{Matriz$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ingresarDato()}{ingresarDato()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{class_matriz}{Matriz}}$<$ T $>$\+::ingresar\+Dato (\begin{DoxyParamCaption}\item[{const string \&}]{mensaje }\end{DoxyParamCaption})}
+
+
+
+Función para ingresar un dato de tipo T desde la consola. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mensaje} & Mensaje a mostrar antes de solicitar la entrada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Dato de tipo T ingresado por el usuario. 
+\end{DoxyReturn}
+\Hypertarget{class_matriz_a0459d7cd81ae1eb0667aa51c9e4ee504}\label{class_matriz_a0459d7cd81ae1eb0667aa51c9e4ee504} 
+\index{Matriz$<$ T $>$@{Matriz$<$ T $>$}!ingresarMatriz@{ingresarMatriz}}
+\index{ingresarMatriz@{ingresarMatriz}!Matriz$<$ T $>$@{Matriz$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ingresarMatriz()}{ingresarMatriz()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+vector$<$ vector$<$ T $>$ $>$ \mbox{\hyperlink{class_matriz}{Matriz}}$<$ T $>$\+::ingresar\+Matriz (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Función para ingresar una matriz de tipo T desde la consola. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{class_matriz}{Matriz} de tipo T ingresada por el usuario. 
+\end{DoxyReturn}
+\Hypertarget{class_matriz_a9b80fb309e805607f93af762bfccb6e5}\label{class_matriz_a9b80fb309e805607f93af762bfccb6e5} 
+\index{Matriz$<$ T $>$@{Matriz$<$ T $>$}!ingresarMatrizCompleja@{ingresarMatrizCompleja}}
+\index{ingresarMatrizCompleja@{ingresarMatrizCompleja}!Matriz$<$ T $>$@{Matriz$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ingresarMatrizCompleja()}{ingresarMatrizCompleja()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$ std\+::vector$<$ std\+::complex$<$ T $>$ $>$ $>$ \mbox{\hyperlink{class_matriz}{Matriz}}$<$ T $>$\+::ingresar\+Matriz\+Compleja (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Función para ingresar una matriz compleja desde la consola. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{class_matriz}{Matriz} compleja ingresada por el usuario. 
+\end{DoxyReturn}
+\Hypertarget{class_matriz_aa77259b450a9aa061e4d2575a2ab74ca}\label{class_matriz_aa77259b450a9aa061e4d2575a2ab74ca} 
+\index{Matriz$<$ T $>$@{Matriz$<$ T $>$}!operacionTipo@{operacionTipo}}
+\index{operacionTipo@{operacionTipo}!Matriz$<$ T $>$@{Matriz$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operacionTipo()}{operacionTipo()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{class_matriz}{Matriz}}$<$ T $>$\+::operacion\+Tipo (\begin{DoxyParamCaption}\item[{T}]{operador }\end{DoxyParamCaption})}
+
+
+
+Función para realizar operaciones en la matriz (suma, resta, multiplicación). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em operador} & Opción de operación ingresada por el usuario. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Operador validado. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{matriz_8hpp}{matriz.\+hpp}}\item 
+\mbox{\hyperlink{matriz_8cpp}{matriz.\+cpp}}\end{DoxyCompactItemize}

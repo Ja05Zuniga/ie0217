@@ -1,0 +1,137 @@
+\doxysection{operacion\+Compleja\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classoperacion_compleja}{}\label{classoperacion_compleja}\index{operacionCompleja$<$ T $>$@{operacionCompleja$<$ T $>$}}
+
+
+Clase que proporciona operaciones complejas en matrices.  
+
+
+
+
+{\ttfamily \#include $<$operacion\+Compleja.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ std\+::vector$<$ std\+::complex$<$ T $>$ $>$ $>$ \mbox{\hyperlink{classoperacion_compleja_aeb82792dd82b478dd5bbb369fc0bdd2c}{suma\+Compleja}} (const std\+::vector$<$ std\+::vector$<$ std\+::complex$<$ T $>$ $>$ $>$ \&matriz1, const std\+::vector$<$ std\+::vector$<$ std\+::complex$<$ T $>$ $>$ $>$ \&matriz2)
+\begin{DoxyCompactList}\small\item\em Método para sumar matrices complejas. \end{DoxyCompactList}\item 
+static std\+::vector$<$ std\+::vector$<$ std\+::complex$<$ T $>$ $>$ $>$ \mbox{\hyperlink{classoperacion_compleja_acc50f93e3639c40edaac9f44bbb7c9c2}{resta\+Compleja}} (const std\+::vector$<$ std\+::vector$<$ std\+::complex$<$ T $>$ $>$ $>$ \&matriz1, const std\+::vector$<$ std\+::vector$<$ std\+::complex$<$ T $>$ $>$ $>$ \&matriz2)
+\begin{DoxyCompactList}\small\item\em Método para restar matrices complejas. \end{DoxyCompactList}\item 
+static std\+::vector$<$ std\+::vector$<$ std\+::complex$<$ T $>$ $>$ $>$ \mbox{\hyperlink{classoperacion_compleja_a10842b85144ff192232c92156e74119c}{multiplica\+Compleja}} (const std\+::vector$<$ std\+::vector$<$ std\+::complex$<$ T $>$ $>$ $>$ \&matriz1, const std\+::vector$<$ std\+::vector$<$ std\+::complex$<$ T $>$ $>$ $>$ \&matriz2)
+\begin{DoxyCompactList}\small\item\em Método para multiplicar matrices complejas. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classoperacion_compleja_aeac21af4e5eef3b35f372916a3039b3d}{imprimir\+Matriz}} (const std\+::vector$<$ std\+::vector$<$ std\+::complex$<$ T $>$ $>$ $>$ \&matriz)
+\begin{DoxyCompactList}\small\item\em Método para imprimir una matriz compleja en la consola. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class operacion\+Compleja$<$ T $>$}
+Clase que proporciona operaciones complejas en matrices. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Tipo de dato de la matriz (puede ser float, double, etc.). \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classoperacion_compleja_aeac21af4e5eef3b35f372916a3039b3d}\label{classoperacion_compleja_aeac21af4e5eef3b35f372916a3039b3d} 
+\index{operacionCompleja$<$ T $>$@{operacionCompleja$<$ T $>$}!imprimirMatriz@{imprimirMatriz}}
+\index{imprimirMatriz@{imprimirMatriz}!operacionCompleja$<$ T $>$@{operacionCompleja$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{imprimirMatriz()}{imprimirMatriz()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classoperacion_compleja}{operacion\+Compleja}}$<$ T $>$\+::imprimir\+Matriz (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ std\+::complex$<$ T $>$ $>$ $>$ \&}]{matriz }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Método para imprimir una matriz compleja en la consola. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matriz} & \doxylink{class_matriz}{Matriz} a imprimir. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classoperacion_compleja_a10842b85144ff192232c92156e74119c}\label{classoperacion_compleja_a10842b85144ff192232c92156e74119c} 
+\index{operacionCompleja$<$ T $>$@{operacionCompleja$<$ T $>$}!multiplicaCompleja@{multiplicaCompleja}}
+\index{multiplicaCompleja@{multiplicaCompleja}!operacionCompleja$<$ T $>$@{operacionCompleja$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{multiplicaCompleja()}{multiplicaCompleja()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$ std\+::vector$<$ std\+::complex$<$ T $>$ $>$ $>$ \mbox{\hyperlink{classoperacion_compleja}{operacion\+Compleja}}$<$ T $>$\+::multiplica\+Compleja (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ std\+::complex$<$ T $>$ $>$ $>$ \&}]{matriz1,  }\item[{const std\+::vector$<$ std\+::vector$<$ std\+::complex$<$ T $>$ $>$ $>$ \&}]{matriz2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Método para multiplicar matrices complejas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matriz1} & Primera matriz a multiplicar. \\
+\hline
+{\em matriz2} & Segunda matriz a multiplicar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Resultado de la multiplicación de las matrices. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & si las dimensiones no son compatibles para la multiplicación. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classoperacion_compleja_acc50f93e3639c40edaac9f44bbb7c9c2}\label{classoperacion_compleja_acc50f93e3639c40edaac9f44bbb7c9c2} 
+\index{operacionCompleja$<$ T $>$@{operacionCompleja$<$ T $>$}!restaCompleja@{restaCompleja}}
+\index{restaCompleja@{restaCompleja}!operacionCompleja$<$ T $>$@{operacionCompleja$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{restaCompleja()}{restaCompleja()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$ std\+::vector$<$ std\+::complex$<$ T $>$ $>$ $>$ \mbox{\hyperlink{classoperacion_compleja}{operacion\+Compleja}}$<$ T $>$\+::resta\+Compleja (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ std\+::complex$<$ T $>$ $>$ $>$ \&}]{matriz1,  }\item[{const std\+::vector$<$ std\+::vector$<$ std\+::complex$<$ T $>$ $>$ $>$ \&}]{matriz2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Método para restar matrices complejas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matriz1} & \doxylink{class_matriz}{Matriz} a la que se resta. \\
+\hline
+{\em matriz2} & \doxylink{class_matriz}{Matriz} que se resta. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Resultado de la resta de las matrices. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & si las matrices no tienen las mismas dimensiones. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classoperacion_compleja_aeb82792dd82b478dd5bbb369fc0bdd2c}\label{classoperacion_compleja_aeb82792dd82b478dd5bbb369fc0bdd2c} 
+\index{operacionCompleja$<$ T $>$@{operacionCompleja$<$ T $>$}!sumaCompleja@{sumaCompleja}}
+\index{sumaCompleja@{sumaCompleja}!operacionCompleja$<$ T $>$@{operacionCompleja$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sumaCompleja()}{sumaCompleja()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$ std\+::vector$<$ std\+::complex$<$ T $>$ $>$ $>$ \mbox{\hyperlink{classoperacion_compleja}{operacion\+Compleja}}$<$ T $>$\+::suma\+Compleja (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ std\+::complex$<$ T $>$ $>$ $>$ \&}]{matriz1,  }\item[{const std\+::vector$<$ std\+::vector$<$ std\+::complex$<$ T $>$ $>$ $>$ \&}]{matriz2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Método para sumar matrices complejas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matriz1} & Primera matriz a sumar. \\
+\hline
+{\em matriz2} & Segunda matriz a sumar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Resultado de la suma de las matrices. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & si las matrices no tienen las mismas dimensiones. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{operacion_compleja_8hpp}{operacion\+Compleja.\+hpp}}\item 
+\mbox{\hyperlink{operacion_compleja_8cpp}{operacion\+Compleja.\+cpp}}\end{DoxyCompactItemize}

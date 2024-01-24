@@ -1,0 +1,55 @@
+\doxysection{Correo Class Reference}
+\hypertarget{class_correo}{}\label{class_correo}\index{Correo@{Correo}}
+
+
+Clase para validar direcciones de correo electrónico.  
+
+
+
+
+{\ttfamily \#include $<$correo.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_correo_a8129c40855eec29f23cffdbf15cb8436}{validar\+Correo}} (const std\+::string \&correo) const
+\begin{DoxyCompactList}\small\item\em Valida una dirección de correo electrónico según ciertas restricciones. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase para validar direcciones de correo electrónico. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_correo_a8129c40855eec29f23cffdbf15cb8436}\label{class_correo_a8129c40855eec29f23cffdbf15cb8436} 
+\index{Correo@{Correo}!validarCorreo@{validarCorreo}}
+\index{validarCorreo@{validarCorreo}!Correo@{Correo}}
+\doxysubsubsection{\texorpdfstring{validarCorreo()}{validarCorreo()}}
+{\footnotesize\ttfamily bool Correo\+::validar\+Correo (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{correo }\end{DoxyParamCaption}) const}
+
+
+
+Valida una dirección de correo electrónico según ciertas restricciones. 
+
+La dirección de correo electrónico debe cumplir con las siguientes condiciones\+:
+\begin{DoxyEnumerate}
+\item El nombre puede contener letras, números, puntos (.) y guiones (-\/), pero no debe comenzar ni terminar con un punto o guion.
+\item El nombre no debe tener más de 15 letras, números, puntos y guiones.
+\item El dominio SOLO puede contener letras y debe tener al menos un punto al final.
+\item La extensión puede contener solo letras y debe tener entre 2 y 4 caracteres.
+\item No se permiten caracteres especiales adicionales en ninguna parte de la dirección de correo electrónico.
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Parameters}
+{\em correo} & La dirección de correo electrónico a validar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si la dirección de correo es válida, false en caso contrario. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{correo_8hpp}{correo.\+hpp}}\item 
+correo.\+cpp\end{DoxyCompactItemize}
