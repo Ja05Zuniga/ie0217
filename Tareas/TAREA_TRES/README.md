@@ -1,3 +1,7 @@
+## Instrucciones ##
+Los programas se encuentran dentro de la carpeta src con el Makefile de los archivos de operaciones con matrices.
+Dentro de src, también está la carpeta 'correo' en la que se encuetra la segunda parte de la tarea, también con su respectivo Makefile. Ambos proyecto pueden correr con mingw32-make                                                             
+
 # Parte Teórica #
 ## Templates: ##
 ### 1. Definición de Templates: Explique el concepto de templates en C++ y proporcione un ejemplo simple. ### 
