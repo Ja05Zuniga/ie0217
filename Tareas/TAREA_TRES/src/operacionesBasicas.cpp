@@ -1,84 +1,79 @@
+/**
+ * @file operacionesBasicas.cpp
+ * @brief Implementación de los métodos de la clase operacionesBasicas.
+ */
 #include "operacionesBasicas.hpp"
 
 template <typename T>
-operacionesBasicas<T>::operacionesBasicas(size_t filas, size_t columnas) : filas(filas), columnas(columnas), matriz(filas, std::vector<T>(columnas, 0)) {}
+bool operacionesBasicas<T>::validarDimensiones(const std::vector<std::vector<T>>& matriz1, const std::vector<std::vector<T>>& matriz2) {
+    return (matriz1.size() == matriz2.size()) && (matriz1[0].size() == matriz2[0].size());
+}
 
 template <typename T>
-bool operacionesBasicas<T>::validacion(T filas1, T columnas1,T filas2, T columnas2, T opcion) {
-    switch (opcion) {
-    case 1:
-        if (filas1 == filas2 || columnas1 == columnas2) {
-            return true;
-        } else {
-            cout << "No se puede realizar la operación" << endl;
-            return false;
-        }
-    case 2:
-        if (filas1 == filas2 || columnas1 == columnas2) {
-            return true;
-        } else {
-            cout << "No se puede realizar la operación" << endl;
-            return false;
-        }
-    case 3:
-        if (columnas1 == filas2) {
-            return true;
-        } else {
-            cout << "No se puede realizar la operación" << endl;
-            return false;
-        }
-    default:
-        cout << "Ingrese un valor válido" << endl;
-        return false;
+std::vector<std::vector<T>> operacionesBasicas<T>::sumar(const std::vector<std::vector<T>>& matriz1, const std::vector<std::vector<T>>& matriz2) {
+    
+    if (!validarDimensiones(matriz1, matriz2)) {
+        throw std::invalid_argument("Las matrices no tienen las mismas dimensiones para la suma.");
     }
-}
 
 
-template <typename T>
-void operacionesBasicas<T>::ingresarElementos() {
-    Matriz<T> mat;
-    matriz = mat.ingresarMatriz(filas, columnas);
-}
+    std::vector<std::vector<T>> resultado(matriz1.size(), std::vector<T>(matriz1[0].size()));
 
-template <typename T>
-operacionesBasicas<T> operacionesBasicas<T>::operator+(const operacionesBasicas& other) const {
-    operacionesBasicas result(filas, columnas);
-    for (size_t i = 0; i < filas; ++i) {
-        for (size_t j = 0; j < columnas; ++j) {
-            result.matriz[i][j] = matriz[i][j] + other.matriz[i][j];
+    for (size_t i = 0; i < matriz1.size(); ++i) {
+        for (size_t j = 0; j < matriz1[0].size(); ++j) {
+            resultado[i][j] = matriz1[i][j] + matriz2[i][j];
         }
     }
-    return result;
+
+    return resultado;
 }
 
 template <typename T>
-operacionesBasicas<T> operacionesBasicas<T>::operator-(const operacionesBasicas& other) const {
-    operacionesBasicas result(filas, columnas);
-    for (size_t i = 0; i < filas; ++i) {
-        for (size_t j = 0; j < columnas; ++j) {
-            result.matriz[i][j] = matriz[i][j] - other.matriz[i][j];
+std::vector<std::vector<T>> operacionesBasicas<T>::restar(const std::vector<std::vector<T>>& matriz1, const std::vector<std::vector<T>>& matriz2) {
+  
+    if (!validarDimensiones(matriz1, matriz2)) {
+        throw std::invalid_argument("Las matrices no tienen las mismas dimensiones para la resta.");
+    }   
+   
+
+
+    std::vector<std::vector<T>> resultado(matriz1.size(), std::vector<T>(matriz1[0].size()));
+
+    for (size_t i = 0; i < matriz1.size(); ++i) {
+        for (size_t j = 0; j < matriz1[0].size(); ++j) {
+            resultado[i][j] = matriz1[i][j] - matriz2[i][j];
         }
     }
-    return result;
+
+    return resultado;
 }
 
 template <typename T>
-operacionesBasicas<T> operacionesBasicas<T>::operator*(const operacionesBasicas& other) const {
-    operacionesBasicas result(filas, columnas);
-    for (size_t i = 0; i < filas; ++i) {
-        for (size_t j = 0; j < columnas; ++j) {
-            result.matriz[i][j] = matriz[i][j] * other.matriz[i][j];
+std::vector<std::vector<T>> operacionesBasicas<T>::multiplicar(const std::vector<std::vector<T>>& matriz1, const std::vector<std::vector<T>>& matriz2) {
+
+    if (matriz1[0].size() != matriz2.size()) {
+        throw std::invalid_argument("El numero de columnas de la primera matriz no coincide con el numero de filas de la segunda matriz para multiplicar.");
+    }
+
+    std::vector<std::vector<T>> resultado(matriz1.size(), std::vector<T>(matriz2[0].size(), 0));
+
+    for (size_t i = 0; i < matriz1.size(); ++i) {
+        for (size_t j = 0; j < matriz2[0].size(); ++j) {
+            for (size_t k = 0; k < matriz1[0].size(); ++k) {
+                resultado[i][j] += matriz1[i][k] * matriz2[k][j];
+            }
         }
     }
-    return result;
+
+    return resultado;
 }
 
 template <typename T>
-void operacionesBasicas<T>::print() const {
-    for (int i = 0; i < filas; ++i) {
-        for (int j = 0; j < columnas; ++j) {
-            cout << matriz[i][j] << " ";
+void operacionesBasicas<T>::imprimirMatriz(const std::vector<std::vector<T>>& matriz) {
+        for (const auto& fila : matriz) {
+            for (const auto& elemento : fila) {
+                std::cout << elemento << " ";
+            }
+            std::cout << std::endl;
         }
-        cout << endl;
     }
-}
