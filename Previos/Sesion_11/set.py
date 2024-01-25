@@ -12,6 +12,7 @@ tech_companies = ['apple', 'google', 'apple']
 companies.update(tech_companies)
 print(companies)
 # Salida: {'google', 'apple', 'Lacoste', 'Ralph Lauren'} No permite elementos repetidos
+#Fin
 
 # Creación de un conjunto y eliminación de un elemento
 languages = {'Swift', 'Java', 'Python'}
@@ -25,10 +26,12 @@ print('Conjunto después de discard():', languages)
 # Creación de un conjunto de tipo entero
 student_id = {112, 114, 116, 118, 115}
 print('ID de Estudiantes:', student_id)
+#Fin
 
 # Creación de un conjunto de tipo cadena
 vowel_letters = {'a', 'e', 'i', 'o', 'u'}
 print('Letras Vocales:', vowel_letters)
+#Fin
 
 # Creación de un conjunto de tipos de datos mixtos
 mixed_set = {'Hello', 101, -2, 'Bye'}

@@ -11,8 +11,8 @@ class Habitacion:
 habitacion_de_estudio = Habitacion()
 
 # Asignar valores a todos los atributos
-habitacion_de_estudio.length = 42.5
-habitacion_de_estudio.breadth = 30.8
+habitacion_de_estudio.length = 12
+habitacion_de_estudio.breadth = 2
 
 # Acceder al método dentro de la clase
 habitacion_de_estudio.calcular_area()

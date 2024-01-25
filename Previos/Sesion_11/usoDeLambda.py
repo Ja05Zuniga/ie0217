@@ -4,6 +4,7 @@ usuario = lambda nombre: print('Hola,', nombre)
 # llamada a la lambda
 usuario('Delilah')
 # Salida: Hola, Delilah
+#Fin
 
 print('Filtrado de elementos pares')
 #Filtrar solo los elementos pares de una lista
@@ -12,6 +13,7 @@ nueva_lista = list(filter(lambda x: (x % 2 == 0), mi_lista))
             #lista, filtro(funcion), aplica lambda, de dónde? a mi_lista
 print(nueva_lista)
 # Salida: [4, 6, 8, 12]
+#Fin
 
 print('Multiplica por 2 cada elemento')
 #Duplicar cada elemento de una lista usando map()
