@@ -33,8 +33,8 @@ class Prestamos:
         except ZeroDivisionError:
             print("Error: la cantidad de cuotas no puede ser cero.")
             return []  # Si se produce una excepción, retorna una lista vacía
-        except Exception as e:
-            print(f"Error inesperado: {str(e)}")
+        except Exception:
+            print(f"Error inesperado:")
             return []
 
     def generar_reporte(self, archivo_salida):
@@ -43,8 +43,8 @@ class Prestamos:
             df = pd.DataFrame(self.amortizacion)
             df.to_csv(archivo_salida, index=False)
             print(f'Reporte con éxito: {archivo_salida}')
-        except Exception as e:
-            print(f'Ocurrió un error al generar reporte: {str(e)}')
+        except Exception:
+            print(f'Ocurrió un error al generar reporte')
 
     def graficar_amortizacion(self):
         # Convertir cronograma de amortización a un DataFrame de Pandas y guardar un archivo CSV
