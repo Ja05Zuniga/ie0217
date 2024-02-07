@@ -5,7 +5,7 @@ Donde primero se ejecutará la primera parte de la tarea y una vez finalizada su
 
 En el caso que se desee ejecutar los archivos por separados, se puede lograr usando: mingw32-make run_prueba. Para el caso de la primera parte y para la segunda parte usando: mingw32-make run_prueba2.
 
-NOTA: El archivo llamado prueba.py, que comprende la primera parte de la tarea, solo funciona con el makefile si se especifica la ruta donde se encuentra el archivo .CSV, sin importar que el archivo .CSV esté en la carpeta src. Si se ejecuta manualmente (python prueba.py), no sucede este error. El errros que muestra es indica que no encuentra o existe el archivo.
+NOTA: El archivo llamado prueba.py, que comprende la primera parte de la tarea, solo funciona con el makefile si se especifica la ruta donde se encuentra el archivo .CSV, sin importar que el archivo .CSV esté en la carpeta src. Si se ejecuta manualmente (python prueba.py), no sucede este error. El error que muestra es indica que no encuentra o existe el archivo.
 
 # Parte Teórica #
 ## Iteradores ##
