@@ -71,8 +71,10 @@ Esta sección se dedicará a analizar los resultados y posibles usos de los hall
 El archivo .csv que se usó fue el registro de aerolíneas estadounidenses sin escalas desde enero de 2013 hasta octubre de ese mismo año. Dentro de este se encontraban varios datos que se pueden emplear para analizar diversos temas. Sim embargo, para este trabajo, se usó para encontrar el número de despegues reales y número de pasajeros por aerolínea. Con esto en mente, se pudo determinar el trimestre más concurrido por las aerolíneas y las ciudades con mayor número de visitantes. además, se extrajo la aerolínea que transportó el mayor número de pasajeros, con sus respectivos números de vuelo, en el transcurso de 10 meses. También se logró extraer la aerolínea que realizó el mayor número de despegues reales con su respectivo número de pasajeros en el mismo periodo anteriormente mencionado.
 
 La aerolínea que registró el mayor número de vuelos fue American Airlines Inc con pasajeros 26625164 totales y 179863 despegues. Seguida de Southwest Airlines Co, con pasajeros 23609674 totales y 183582 despegues. En el tercer lugar se encuentra Delta Air Lines con números muy parecidos a la segunda aerolínea.
+![Logo](Figure_1.png)
 
 La ciudad más transitada fue Orlando, Florida. Con mayor número de visitas en el segundo trimestre del 2023. Las 4 ciudades con más vuelos registrados pertenecen al estado de Florida. El segundo semestre del año se presenta la estación de verano en el territorio estadounidense coincidiendo que Florida es un estado popularmente conocido como un destino vacacional por sus playas oportunas para el verano.
+![Logo](Figure_1asd.png)
 
 ## Implicaciones ##
 El tener un seguimiento de los vuelos y pasajeros es útil para tener un seguimiento de la competencia por parte de las aerolíneas. El conocer cuál aerolínea tiene el mayor número de pasajeros hace preguntarse el porqué. De esa forma los ejecutivos pueden prepararse para hacerle frente o crear una alternativa útil para ellos. Por citar un ejemplo, comparado las dos aerolíneas que registraron el mayor número de pasajeros American Airlines Inc y Southwest Airlines Co.
